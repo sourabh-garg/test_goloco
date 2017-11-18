@@ -1,0 +1,172 @@
+$primary : #f8bf46;
+
+.home{
+  background-color: black ;
+  padding: 30px 10% 50px 10%;
+
+
+  h5{
+    font-size: 30px;
+    font-weight: 400;
+    color: #d4d4d4;
+    text-align: center;
+    padding: 50px 0px;
+
+  }
+}
+.border_bottom{
+  border-bottom: 10px solid #333333;
+}
+
+
+
+.home_text{
+  font-size: 22px;
+  line-height: 45px;
+  color: #b1b1b1;
+  font-weight: 300;
+
+
+}
+
+.fullHeightBox{
+  min-height: 100vh;
+
+}
+
+.partners{
+  margin-left: 15px;
+  list-style: none;
+
+  li{
+    font-size: 21px;
+    line-height: 40px;
+    color: #b1b1b1;
+
+  }
+
+}
+
+.logo{
+
+  text-align: center;
+  img{
+    height: 80px;
+  }
+
+}
+
+.navLinks{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  a{
+    font-size: 16px;
+    cursor: pointer;
+    color: #d4d4d4;
+  }
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+.register_form{
+
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 5px;
+  input{
+
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+
+  }
+
+}
+
+.relative{
+  position: relative;
+}
+
+.validation{
+  position: absolute;
+  font-size: 13px;
+  color: salmon;
+}
+
+.countryCode{
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+
+.form_control{
+  margin-bottom: 40px;
+
+}
+
+.phoneno{
+  padding-left: 60px !important;
+}
+
+.orText{
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.submit_btn, .submit_btn:focus, .submit_btn:hover{
+  background-color: $primary;
+  color: white;
+  width: 250px;
+  border:none;
+  height: 42px;
+  line-height: 42px;
+}
+
+
+
+.invite_register_form{
+
+  width: 100%;
+  margin: auto;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 5px;
+  input{
+
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+
+  }
+
+}
+
+
+.invite_flex_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .form_control{
+    width: 30%;
+  }
+}
+
+.footer{
+  background-color: black ;
+  padding: 30px 10% 50px 10%;
+  display: flex;
+  align-items: center;
+
+  img{
+    height: 50px;
+    margin-right: 20px;
+  }
+}
