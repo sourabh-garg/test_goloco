@@ -65,8 +65,10 @@ class Main extends React.Component{
 
         <Element name="home">
 
-          <div className="home fullHeightBox border_bottom">
-            <p className="home_text">
+          <div className="home fullHeightBox relative">
+            <img className="bg1" src="../../images/bg2.jpg" alt=""/>
+
+            <p className="home_text text_bg1">
               Goloco is attempting to create a Digital platform that connects the Pubs, bars, clubs and lounges of the world. While ours is a massive goal, we have chosen to take it one step at a time.
 
               We are now a “Invite only” app on Android and iOS with some limited features. On November 23rd 2017, we will host the first set of  people at 3 locations in Bangalore. Our hope is that all of them have a memorable experience and will return along with other friends for many more moments of joy together.
@@ -86,11 +88,11 @@ class Main extends React.Component{
 
         <Element name="concept">
 
-          <div className="home fullHeightBox border_bottom">
-
+          <div className="home fullHeightBox  relative">
+            <img className="bg2" src="../../images/concept.jpg" alt=""/>
             <h5>The concept</h5>
 
-            <p className="home_text">
+            <p className="home_text text_bg1">
               The bar and club market in the US (the largest market in the world) has a gross profit of about $15 Billion, which amounts to $129 spent by every American between the ages of 25 and 59. Why do people go to bars and clubs? The answer is togetherness. We do so in order to strengthen social contacts and feel a sense of belonging.
 
               Togetherness is quite different from beer, but then again, a lot of beer does go along with togetherness sales. The beer is the ritual; the pub is the stage upon which it unfolds.
@@ -105,10 +107,11 @@ class Main extends React.Component{
 
         <Element name="hard_work">
 
-          <div className="home fullHeightBox border_bottom">
+          <div className="home fullHeightBox  relative">
+            <img className="bg3" src="../../images/hardfun.jpg" alt=""/>
             <h5>Hard work to Hard fun – November 23rd 2017</h5>
 
-            <p className="home_text">
+            <p className="home_text text_bg1">
         For the past few years, we visited capital cities across both the developed and the developing world. We partied in various locations from the swish nightclubs in Manhattan to the local bars in Dar es Salaam. We felt the need to unite people across the world trying to attain the coveted balance between work and fun, family and company, others and self. Hence, we are creating Goloco.
 
         We didn’t want to wait. We are inviting a select few to experience a closed group beta on November 23rd across 3 locations in Bangalore – Tilt Koramangala, Warehouse Indiranagar, Fiddler’s Green Kammanahalli.
@@ -122,9 +125,10 @@ class Main extends React.Component{
 
         <Element name="partner">
 
-          <div className="home border_bottom">
+          <div className="home relative no_overflow">
 
             <h5>Partners</h5>
+            <img className="bg5" src="../../images/partner.jpg" alt=""/>
 
             <ul className="partners">
               <li>
@@ -142,9 +146,6 @@ class Main extends React.Component{
                 Warehouse – Location partner – Link to Warehouse Facebook page
               </li>
               <li>
-                Warehouse – Location partner – Link to Warehouse Facebook page
-              </li>
-              <li>
                 Fiddler’s green – Location partner – Link to Fiddler’s green Facebook page
               </li>
 
@@ -156,7 +157,7 @@ class Main extends React.Component{
 
         <Element name="contact">
 
-          <div className="home border_bottom">
+          <div className="home border_bottom bg6">
 
             <h5>Contact us</h5>
 
@@ -169,7 +170,7 @@ class Main extends React.Component{
 
         <Element name="register">
 
-          <div className="home border_bottom">
+          <div className="home border_bottom ">
 
             <h5>Register</h5>
 

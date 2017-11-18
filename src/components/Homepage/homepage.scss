@@ -11,37 +11,47 @@ $primary : #f8bf46;
     color: #d4d4d4;
     text-align: center;
     padding: 50px 0px;
+    position: relative;
+    z-index: 4;
 
   }
 }
 .border_bottom{
-  border-bottom: 10px solid #333333;
+  border-bottom: 3px solid #333333;
 }
 
 
 
 .home_text{
-  font-size: 22px;
+  font-size: 17px;
   line-height: 45px;
   color: #b1b1b1;
   font-weight: 300;
+  position: relative;
+  z-index: 3;
 
 
 }
 
 .fullHeightBox{
   min-height: 100vh;
+  overflow: hidden;
 
 }
 
 .partners{
   margin-left: 15px;
   list-style: none;
+  z-index: 4;
+  position: relative;
 
   li{
-    font-size: 21px;
+    font-size: 17px;
     line-height: 40px;
     color: #b1b1b1;
+    padding: 2px 20px;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
 
   }
 
@@ -170,3 +180,115 @@ $primary : #f8bf46;
     margin-right: 20px;
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  .home {
+    background-color: black;
+    padding: 30px 5% 50px 5%;
+
+    h5{
+      font-size: 20px;
+      padding: 15px 0px;
+    }
+
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    a{
+      margin-right: 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .home_text{
+    font-size: 16px;
+    line-height: 35px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .partners{
+    margin-left: 15px;
+    list-style: none;
+
+    li{
+      font-size: 16px;
+      line-height: 35px;
+      color: #b1b1b1;
+
+    }
+  }
+  .invite_flex_box{
+    flex-wrap: wrap;
+
+    .form_control{
+      width: 100%;
+    }
+
+
+  }
+  .logo img {
+    height: 60px;
+  }
+
+
+}
+
+
+.bg1{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  top: 0;
+  opacity: .7;
+}
+
+.bg2{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  top: 0;
+  opacity: .4;
+}
+
+.bg3{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  top: 0;
+  opacity: .4;
+}
+
+.bg5{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  top: 0;
+  opacity: .5;
+
+}
+
+
+.text_bg1{
+
+  padding: 20px;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.no_overflow{
+  overflow: hidden;
+}
+
+
