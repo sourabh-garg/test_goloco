@@ -15,9 +15,7 @@ const GLOBALS = {
 export default {
     devtool: 'source-map',
     entry: {
-      venueListing:  path.resolve(__dirname, 'src/index.js'),
-      desktop : path.resolve(__dirname, 'src/styles/desktop.scss'),
-      mobile : path.resolve(__dirname, 'src/styles/mobile.scss'),
+      main:  path.resolve(__dirname, 'src/index.js'),
       vendor: ["react", "react-dom", "react-redux", "redux", "redux-thunk", "react-router"]
     },
     target: 'web',
@@ -29,7 +27,7 @@ export default {
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js', }),
         // Generate an external css file with a hash in the filename
-        new ExtractTextPlugin('venueListing.[name].css'),
+        new ExtractTextPlugin('main.css'),
 
         new OptimizeCssAssetsPlugin({
             cssProcessorOptions: { discardComments: { removeAll: true } }

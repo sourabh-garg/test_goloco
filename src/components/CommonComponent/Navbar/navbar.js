@@ -4,7 +4,7 @@ import './navbar.scss';
 import './navbar_mobile.scss';
 import Scroll from 'react-scroll';
 let Link       = Scroll.Link;
-
+import HamMenu from './hamMenu';
 
 class Navbar extends React.Component{
 
@@ -23,11 +23,20 @@ class Navbar extends React.Component{
     return (
       <div className="container navbar home">
 
-        <div className="logo">
-          <a href=""><img src="../../images/goloco.png" alt=""/></a>
+        <div className="flex hammMenu_hide">
+
+          <div className="desktop_hide">
+            <HamMenu />
+          </div>
+
+
+          <div className="logo">
+            <a href=""><img src="https://image.ibb.co/cccJF6/goloco.png" alt=""/></a>
+          </div>
         </div>
 
-        <div className="navLinks">
+
+        <div className="navLinks mobileHide">
 
           <Link to="home" spy={true} smooth={true} duration={500} offset={0}>Home</Link>
           <Link to="concept" spy={true} smooth={true} duration={500} offset={220}>The concept</Link>

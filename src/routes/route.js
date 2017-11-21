@@ -6,7 +6,7 @@ import { Route, IndexRoute } from "react-router";
 
 
 
-module.exports = (
+export default (
   <Route path="/" component={Main}>
 
     <IndexRoute component={HomePage}/>

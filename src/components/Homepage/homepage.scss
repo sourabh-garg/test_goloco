@@ -53,6 +53,10 @@ $primary : #f8bf46;
     margin-top: 15px;
     background-color: rgba(0, 0, 0, 0.7);
 
+    a{
+      color: #b1b1b1;
+    }
+
   }
 
 }
@@ -60,6 +64,7 @@ $primary : #f8bf46;
 .logo{
 
   text-align: center;
+  margin: auto;
   img{
     height: 80px;
   }
@@ -195,14 +200,16 @@ $primary : #f8bf46;
   }
 
   .navLinks {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+   display: block;
     margin-top: 50px;
 
     a{
+      display: block;
       margin-right: 30px;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      padding-left: 20px;
+      color: #313131;
     }
   }
 

@@ -17,7 +17,7 @@ class Footer extends React.Component {
     return (
       <div className="container footer ">
 
-        <img src="../../images/goloco.png" alt=""/>
+        <img src="https://image.ibb.co/cccJF6/goloco.png" alt=""/>
 
         © 2017 Goloco. All Rights reserved.
 
