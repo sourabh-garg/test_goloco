@@ -29,10 +29,12 @@ function checkFormValidation(formObj){
 
   if(obj.phone.toString().length !== 10 && obj.phone){
     phone = false;
+    valid = false;
     obj.phoneValid = false;
   }
   if(!checkEmail(obj.email) && obj.email){
     email = false;
+    valid = false;
     obj.emailValid = false;
   }
 
@@ -71,10 +73,12 @@ function checkInviteValidation(formObj){
 
   if(obj.phone.toString().length !== 10 && obj.phone){
     phone = false;
+    valid = false;
     obj.phoneValid = false;
   }
   if(!checkEmail(obj.email) && obj.email){
     email = false;
+    valid = false;
     obj.emailValid = false;
   }
 
@@ -97,8 +101,13 @@ const defaultInviteData = [{nameValid: true, emailValid: true, phoneValid: true,
   {nameValid: true, emailValid: true, phoneValid: true, name:"", phone:"", email:"" }];
 
 
-
-
+function removeEmpty(obj){
+  Object.keys(obj).forEach(k =>
+    (obj[k] && typeof obj[k] === 'object') && removeEmpty(obj[k]) ||
+    (!obj[k] && obj[k] !== undefined) && delete obj[k]
+  );
+  return obj;
+}
 
 class Main extends React.Component{
 
@@ -142,6 +151,11 @@ class Main extends React.Component{
       let data = checkFormValidation(registerData);
       this.setState({registerData : data.formObj});
       if(data.valid){
+
+      // var newObj =   removeEmpty({...data.formObj});
+      //
+      //   console.log(data.formObj, newObj);
+
         request.
         post('/save_reg_dat.php').
         send({ registeringUser: data.formObj}).
