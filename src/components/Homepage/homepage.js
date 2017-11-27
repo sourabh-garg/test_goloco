@@ -8,6 +8,7 @@ import InviteForm from './inviteForm';
 import request from 'superagent';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
+import FaceBook from '../../images/facebook';
 
 
 
@@ -101,13 +102,39 @@ const defaultInviteData = [{nameValid: true, emailValid: true, phoneValid: true,
   {nameValid: true, emailValid: true, phoneValid: true, name:"", phone:"", email:"" }];
 
 
-function removeEmpty(obj){
-  Object.keys(obj).forEach(k =>
-    (obj[k] && typeof obj[k] === 'object') && removeEmpty(obj[k]) ||
-    (!obj[k] && obj[k] !== undefined) && delete obj[k]
-  );
-  return obj;
+function removeEmpty(arr){
+
+  let newArr = [];
+
+  arr.forEach((item) => {
+    let obj = {};
+
+    if(item.name){
+      obj["name"] = item.name;
+    }
+    if(item.email){
+      obj["email"] = item.email;
+    }
+    if(item.phone){
+      obj["phone"] = item.phone;
+    }
+
+    if(!isEmpty(obj)){
+      newArr.push(obj);
+    }
+
+  });
+
+
+  return newArr;
 }
+
+function isEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
+
+
+
 
 class Main extends React.Component{
 
@@ -132,9 +159,14 @@ class Main extends React.Component{
 
       if(data1.valid && data2.valid && data3.valid && data4.valid && data5.valid){
 
+        var newArr =   removeEmpty(newArray);
+        var newObj =   removeEmpty([registerData]);
+
+        console.log(newArr, newObj);
+
         request.
         post( '/save_reg_dat.php').
-        send({registeringUser : registerData, referral : newArray}).
+        send({registeringUser : newObj[0], referral : newArr}).
         set('Accept', 'application/json').
         end((error, res) => {
          if(error){
@@ -152,13 +184,12 @@ class Main extends React.Component{
       this.setState({registerData : data.formObj});
       if(data.valid){
 
-      // var newObj =   removeEmpty({...data.formObj});
-      //
-      //   console.log(data.formObj, newObj);
+      var newObj =   removeEmpty([{...data.formObj}]);
+
 
         request.
         post('/save_reg_dat.php').
-        send({ registeringUser: data.formObj}).
+        send({ registeringUser: newObj[0]}).
         set('Accept', 'application/json').
         end((error, res) => {
           if(error){
@@ -214,9 +245,9 @@ class Main extends React.Component{
       <div className="container">
         <NotificationContainer/>
 
-        <Element name="home">
+        <Element name="home ">
 
-          <div className="home fullHeightBox relative">
+          <div className="home fullHeightBox relative margin_top_nav">
             <img className="bg1" src="https://image.ibb.co/ntD8F6/bg2.jpg" alt=""/>
 
             <p className="home_text text_bg1">
@@ -313,7 +344,7 @@ class Main extends React.Component{
             <h5>Contact us</h5>
 
             <p className="home_text text-center">Email: support@goloco.in</p>
-            <p className="home_text text-center"><a className="home_text text-center" href=" https://www.facebook.com/thegoloco">Find us on Facebook</a></p>
+            <p className="home_text text-center"><a className="home_text text-center" href=" https://www.facebook.com/thegoloco">Find us on Facebook  <span className="facebook"><FaceBook /></span></a></p>
 
           </div>
 

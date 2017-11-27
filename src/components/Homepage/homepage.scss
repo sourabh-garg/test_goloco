@@ -1,5 +1,16 @@
 $primary : #f8bf46;
 
+
+.facebook{
+  padding-top: 10px;
+  display: inline-flex;
+  margin-left: 5px;
+  svg{
+    height: 20px;
+    width: 20px;
+  }
+
+}
 .home{
   background-color: black ;
   padding: 30px 10% 50px 10%;
@@ -188,6 +199,13 @@ $primary : #f8bf46;
 
 
 @media only screen and (max-width: 768px) {
+
+  .margin_top_nav{
+    padding-top: 50px !important;
+
+  }
+
+
   .home {
     background-color: black;
     padding: 30px 5% 50px 5%;

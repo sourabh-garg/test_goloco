@@ -5,12 +5,11 @@
   }
 
   .navbar{
-    padding-bottom: 10px;
-    padding-top: 10px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-    position: relative;
     z-index: 10;
     background-color: white;
+    padding: 10px 5% 10px 5% !important;
+    position: fixed;
   }
 
   .user-profile-pic{
